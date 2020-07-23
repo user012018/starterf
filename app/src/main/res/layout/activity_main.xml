@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+  <ProgressBar
+      android:id="@+id/progress_bar"
+      style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <TextView
+      android:id="@+id/main_textview"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      android:text="@string/textview" />
+
+  <!-- This nested layout contains views of its own -->
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <!-- Set OnClickListener
+        to trigger results when pressed -->
+    <Button
+        android:id="@+id/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/button" />
+
+    <!-- Shows an image from your drawable resources -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_launcher" />
+
+    <!-- Closing tag for the horizontal nested layout -->
+  </LinearLayout>
+
+  <!-- Displays keyboard when touched -->
+  <EditText
+      android:id="@+id/main_edittext"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      android:inputType="text"
+      android:lines="1"
+      android:maxLines="1"
+      android:hint="@string/hint" />
+
+  <!-- List whose dataset is defined in code with an adapter -->
+  <ListView
+      android:id="@+id/main_listview"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      tools:visibility="gone"
+      android:visibility="gone"
+      android:layout_marginTop="20dp"
+      android:layout_weight="1" />
+
+  <TextView
+      android:id="@+id/empty_view"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_margin="48dp"
+      tools:visibility="visible"
+      android:gravity="center"
+      android:layout_weight="1"
+      android:text="@string/empty_view" />
+</LinearLayout>
